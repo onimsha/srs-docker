@@ -1,4 +1,4 @@
-FROM dockerfile/nginx
+FROM nginx:latest
 
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD livestream.m3u8 /etc/nginx/livestream.m3u8

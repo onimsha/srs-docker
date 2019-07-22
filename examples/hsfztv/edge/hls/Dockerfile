@@ -1,11 +1,11 @@
-FROM ossrs/srs:1.0.beta
+FROM ossrs/srs:3.0
 
 ADD hls.conf /etc/hls.conf
 
 CMD \
     mkdir -p /data/root/live && \
     mkdir -p /data/log/hls && \
-    srs -c /etc/hls.conf
+    objs/srs -c /etc/hls.conf
 
 VOLUME ["/data"]
 EXPOSE 1935
