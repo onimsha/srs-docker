@@ -5,21 +5,18 @@ services:
     ports:
       - "1935:1935"
     volumes:
-      - "data:/data"
+      - "./data:/data"
     links:
       - hls
 
   hls:
     build: ./hls/
     volumes:
-      - "data:/data"
+      - "./data:/data"
 
   nginx:
     build: ./nginx/
     ports:
       - "80:80"
     volumes:
-      - "data:/data"
-
-volumes:
-  data:
+      - "./data:/data"
