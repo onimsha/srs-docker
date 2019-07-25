@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  srs-rtmp:
+    build: ./2.0/ffmpeg
+    ports:
+      - 1935:1935
+      - 8080:8080
+    volumes:
+      - ./conf/transcode-multi-profiles.conf:/srs/conf/docker.conf
