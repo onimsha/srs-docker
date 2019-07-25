@@ -1,4 +1,4 @@
-FROM ossrs/srs:3.0-ffmpeg
+FROM ossrs/srs:2.0-ffmpeg
 
 ADD transcode.conf /etc/transcode.conf
 

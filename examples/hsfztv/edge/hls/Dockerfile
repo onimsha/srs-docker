@@ -1,4 +1,4 @@
-FROM ossrs/srs:3.0
+FROM ossrs/srs:2.0
 
 ADD hls.conf /etc/hls.conf
 
