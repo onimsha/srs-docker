@@ -1,16 +1,9 @@
 version: '3'
 services:
-  transcode:
-    build: ./transcode/
-    ports:
-      - "1935:1935"
-    volumes:
-      - "./data:/data"
-    links:
-      - hls
-
   hls:
     build: ./hls/
+    ports:
+      - "1935:1935"
     volumes:
       - "./data:/data"
 
